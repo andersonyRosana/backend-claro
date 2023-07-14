@@ -14,10 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   report.init({
-    subscriber: DataTypes.STRING,
+    category: DataTypes.INTEGER,
+    subcategory: DataTypes.INTEGER,
+    phone: DataTypes.STRING,
+    customer_reported: DataTypes.STRING,
+    assignment: DataTypes.INTEGER,
+    notes: DataTypes.STRING,
+    frequency: DataTypes.STRING,
     address: DataTypes.STRING,
-    type: DataTypes.STRING,
-    comment: DataTypes.STRING,
     latitude: DataTypes.FLOAT,
     longitude: DataTypes.FLOAT,
     creationDate: DataTypes.DATE

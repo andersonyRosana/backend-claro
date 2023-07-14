@@ -13,8 +13,6 @@ const ReportRouter = require("./routes/report.router");
 const { ReportController } = require("../api/controllers");
 //services
 const { ReportService } = require("../service");
-//business
-const { ReportBusiness } = require("../domain");
 //repository
 const { ReportRepository } = require("../dal/repositories");
 //db
@@ -40,9 +38,6 @@ container
     })
     .register({
         ReportService: asClass(ReportService).singleton(),
-    })
-    .register({
-        ReportBusiness: asClass(ReportBusiness).singleton()
     })
     .register({
         ReportRepository: asClass(ReportRepository).singleton()
